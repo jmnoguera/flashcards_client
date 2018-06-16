@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
                 //redefine class invoked, creation or getting from the db?
                 // the next activity is missing
-                Intent intent = new Intent(MainActivity.this, null);
-                startActivityForResult(intent, RESULT_COLLECTION);
+//                Intent intent = new Intent(MainActivity.this, null);
+//                startActivityForResult(intent, RESULT_COLLECTION);
             }
         });
 

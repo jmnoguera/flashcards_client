@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">flashcards_client</string>
+    <string name="app_name">Flashcards</string>
     <string name="action_settings">Settings</string>
     <string name="progress">Progress</string>
     <string name="enter_the_solution">Enter the solution</string>

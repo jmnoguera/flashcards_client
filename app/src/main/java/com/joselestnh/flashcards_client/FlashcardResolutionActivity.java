@@ -102,19 +102,23 @@ public class FlashcardResolutionActivity extends AppCompatActivity {
         Button nextButton = findViewById(R.id.nextButton);
 
         if(currentPosition==0){
-            previousButton.setAlpha(0.5f);
-            previousButton.setClickable(false);
+            previousButton.setVisibility(View.INVISIBLE);
+//            previousButton.setAlpha(0.5f);
+//            previousButton.setClickable(false);
         }else{
-            previousButton.setAlpha(1f);
-            previousButton.setClickable(true);
+            previousButton.setVisibility(View.VISIBLE);
+//            previousButton.setAlpha(1f);
+//            previousButton.setClickable(true);
         }
 
         if(currentPosition==flashcardList.size()-1){
-            nextButton.setAlpha(0.5f);
-            nextButton.setClickable(false);
+            nextButton.setVisibility(View.INVISIBLE);
+//            nextButton.setAlpha(0.5f);
+//            nextButton.setClickable(false);
         }else{
-            nextButton.setAlpha(1f);
-            nextButton.setClickable(true);
+            nextButton.setVisibility(View.VISIBLE);
+//            nextButton.setAlpha(1f);
+//            nextButton.setClickable(true);
         }
 
         //re-print background colour and show answer
@@ -122,10 +126,10 @@ public class FlashcardResolutionActivity extends AppCompatActivity {
             getWindow().getDecorView().setBackgroundResource(R.color.lightGreen);
             answer.setText(getResources().getString(R.string.answer,flashcardList.get(currentPosition).getWordB()));
             answer.setVisibility(View.VISIBLE);
-            input.setVisibility(View.GONE);
+            input.setVisibility(View.INVISIBLE);
         }else{
             getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-            answer.setVisibility(View.GONE);
+            answer.setVisibility(View.INVISIBLE);
             input.setVisibility(View.VISIBLE);
         }
 
@@ -142,7 +146,7 @@ public class FlashcardResolutionActivity extends AppCompatActivity {
             case Flashcard.RELATE:
                 byte[] imageBytes = this.flashcardList.get(currentPosition).getImage();
                 background.setImageBitmap(BitmapFactory.decodeByteArray(imageBytes,0,imageBytes.length));
-                hintWord.setVisibility(View.GONE);
+                hintWord.setVisibility(View.INVISIBLE);
                 break;
 
         }
